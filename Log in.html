@@ -1,39 +1,60 @@
 <html>
-  <head>
-    <title>Login</title>
-    <style>
-      body {
-        background-color: #f2f2f2; 
-        font-family: Arial;
-      }
-      
-      form {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: white;
-        border-radius: 5px;
-      }
-    </style>  
+
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+    }
+
+    .password-container {
+      margin-top: 10px;
+    }
+  </style>
+
+  <script>
+    // This is sample javascript code
+    /*
+        This is javascript multiline comment
+        this is 2nd line
+    */
+    //  This is single line comment
+    // This is another single line comment
     
-  </head>
-  <body>
-    <h1>Welcome!</h1>
+     
+    document.write('<h2>Hi</h2>')
+    document.write(`<h2>Hello ${name}</h2>`)
+  </script>
+
+</head>
+
+<body>
+  <h1>Welcome!</h1>
   <p>Please login to continue</p>
-  
+
   <!-- Login form -->
-  <form> 
+  <form>
     <div>
       <label>Username:</label>
-    <input type="text">
-   </div>
-   <div>
-    <label>Password:</label> 
-    <input type="password"> 
-  </div>
+      <input type="text" placeholder="Enter username">
+    </div>
+    <div class="password-container">
+      <label>Password:</label>
+      <input type="password" placeholder="Enter password">
+    </div>
     <div>
       <button type="submit">Login</button>
-    </div> 
+    </div>
   </form>
-  </body>
+</body>
+
 </html>
