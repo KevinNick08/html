@@ -1,0 +1,35 @@
+<html>
+<body>
+
+<input type="text" id="name" value="kevin" class="name" placeholder="Enter your name">
+
+<label>
+  <input type="radio" class="name" name="gender" value="boy"> Boy
+</label>
+
+<label>  
+  <input type="radio" name="gender" value="girl"> Girl
+</label>
+
+<button onclick="showGender()">Submit</button>
+
+<div id="output"></div>
+
+<script>
+function showGender() {
+  let name = document.getElementById("name").value;
+  let gender = document.querySelector('input[name="gender"]:checked').value;
+
+  let output = "";
+  if (gender == "boy") {
+    output = `${name} is a boy`; 
+  } else {
+    output = `${name} is a girl`;
+  }
+
+  document.getElementById("output").innerHTML = `<b>${output}</b>`; 
+}
+</script>
+
+</body>
+</html>
