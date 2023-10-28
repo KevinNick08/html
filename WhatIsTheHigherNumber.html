@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Compare</title>
+  </head>
+<body>
+
+<input type="text" id="num1">
+<input type="text" id="num2">
+
+<button onclick="compareNumbers()">Compare</button> 
+
+<p id="result"></p>
+
+<script>
+function compareNumbers() {
+  let num1 = document.getElementById("num1").value;
+  let num2 = document.getElementById("num2").value;
+
+  if (num1 > num2) {
+    document.getElementById("result").innerHTML = `Number ${num1} is higher` ;
+  } else if (num2 > num1) {
+    document.getElementById("result").innerHTML =`Number ${num2} is higher`;
+  } else {
+    document.getElementById("result").innerHTML = "The numbers are equal";
+  }
+}
+</script>
+
+</body>
+</html>
