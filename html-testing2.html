@@ -1,0 +1,40 @@
+<html>
+
+<head> 
+    <style>
+        body{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="numberInput">
+    <div>
+        <button onclick="htmltesting()">.hello</button>
+    </div>
+    <div id="output"></div>
+    <script>
+        function htmltesting() {
+            
+            // Get input element
+            const input = document.getElementById("numberInput");
+
+            // Get number from input  
+            const num = input.value;
+
+            printNumbers(num)
+            // Display number in div
+            document.getElementById("output").innerHTML = num;
+        }
+
+        function printNumbers(n) {
+            for (let i = 1; i <= n; i++) {
+                console.log(i);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
