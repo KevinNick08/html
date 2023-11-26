@@ -1,39 +1,46 @@
 <html>
 
-<head> 
-    <style>
-        body{
-            margin: 10px;
-        }
-    </style>
+<head>
+	<style>
+		body {
+			margin: 10px;
+		}
+	</style>
 </head>
 
 <body>
-    <input type="text" id="numberInput">
-    <div>
-        <button onclick="htmltesting()">.hello</button>
-    </div>
-    <div id="output"></div>
-    <script>
-        function htmltesting() {
-            
-            // Get input element
-            const input = document.getElementById("numberInput");
+	<input type="text" id="numberInput">
+	<div>
+		<button onclick="htmlTesting()">Show Count</button>
+	</div>
+	<div id="output"></div>
+	<script>
+		function htmlTesting() {
 
-            // Get number from input  
-            const num = input.value;
+			// Get input element 
+			const input = document.getElementById("numberInput");
 
-            printNumbers(num)
-            // Display number in div
-            document.getElementById("output").innerHTML = num;
-        }
+			// Get number from input  
+			const num = input.value;
 
-        function printNumbers(n) {
-            for (let i = 1; i <= n; i++) {
-                console.log(i);
-            }
-        }
-    </script>
+			printNumbers(num)
+
+			const a = "numberInput"
+			num(a)
+			// Display number in div
+
+		}
+
+		function printNumbers(n) {
+			let numberCount = ''
+			for (let i = 1; i <= n; i = i + 1) {
+				numberCount = numberCount + `<div>${i}</div>`
+				//console.log(numberCount);
+
+			}
+			document.getElementById("output").innerHTML = numberCount;
+		}
+	</script>
 
 </body>
 
