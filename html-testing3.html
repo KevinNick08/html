@@ -31,8 +31,9 @@
 
 		function printNumbers(n) {
 			let numberCount = ''
-			for (let i = n; i >= 1; i = i - 1) {
-				numberCount = numberCount + `<div>${i}</div>`  
+			for (let i = 1; i <= 10; i = i + 1) {
+				const tableValue = i * 2;
+				numberCount = numberCount + `<div>2 x ${i} = ${tableValue}</div>`  
 
 				//console.log(numberCount);
 
