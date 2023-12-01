@@ -12,6 +12,7 @@
 	<input type="text" id="numberInput">
 	<div>
 		<button onclick="htmlTesting()">Show Count</button>
+		<b>Tables\Multiplication</b>
 	</div>
 	<div id="output"></div>
 	<script>
@@ -32,13 +33,9 @@
 		function printNumbers(n) {
 			let numberCount = ''
 			for (let i = 1; i <= 10; i = i + 1) {
-				const tableValue = i * 2;
-				numberCount = numberCount + `<div>2 x ${i} = ${tableValue}</div>`  
-
-				//console.log(numberCount);
-
+				const tableValue2 = n * i;
+				numberCount = numberCount + `<div>${n} x ${i} = ${tableValue2}</div>`
 			}
-            
 			document.getElementById("output").innerHTML = numberCount;
 		}
 	</script>
