@@ -8,26 +8,11 @@
 	</style>
 </head>
 
-<body>
-	<select id="numberInput">
-		<option>1</option>
-		<option>2</option>
-		<option>3</option>
-		<option>4</option>
-		<option>5</option>
-		<option>6</option>
-		<option>7</option>
-		<option>8</option>
-		<option>9</option>
-		<option>10</option>
-		<option>11</option>
-		<option>12</option>
-		<option>13</option>
-		<option>14</option>
-		<option>15</option>
-	</select>
-		<button onclick="htmlTesting()">Show Count</button>
-		<b>Tables\Multiplication</b>
+<body onload="renderTableOptions()">
+	<div id="tableNumberId"></div>
+
+	<button onclick="htmlTesting()">Show Count</button>
+	<b>Tables\Multiplication</b>
 	<div id="output"></div>
 	<script>
 		function htmlTesting() {
@@ -51,6 +36,15 @@
 				numberCount = numberCount + `<div>${n} x ${i} = ${tableValue2}</div>`
 			}
 			document.getElementById("output").innerHTML = numberCount;
+		}
+
+		function renderTableOptions() {
+			let selectHtml = `<select id="numberInput">`
+			for (let j = 1; j <= 15; j = j + 1) {
+				selectHtml = selectHtml + `<option>${j}</option>`
+			}
+			selectHtml = selectHtml + `</select>`
+			document.getElementById('tableNumberId').innerHTML = selectHtml
 		}
 	</script>
 
