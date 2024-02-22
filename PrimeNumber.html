@@ -1,0 +1,40 @@
+<html>
+  <head> </head>
+  <body>
+    <div>
+      <input type="text" id="numberInput" />
+      <button onclick="checkIfPrime()">Check</button>
+      <div id="result"></div>
+    </div>
+    <script>
+      function checkIfPrime() {
+        let number = document.getElementById("numberInput").value;
+
+        if (number ==  "" || isNaN(number)) {
+          document.getElementById("result").innerHTML = "Please enter a number";
+          return;
+        }
+
+        // number = Number(number);
+
+        let isPrime = true;
+
+        if (number <= 1) {
+          isPrime = false;
+        } else if (number <= 3) {
+          isPrime = true;
+        } else if (number % 2 == 0 || number % 3 == 0) {
+          isPrime = false;
+        }
+
+        if (isPrime) {
+          document.getElementById("result").innerHTML =
+            number + " is a prime number";
+        } else {
+          document.getElementById("result").innerHTML =
+            number + " is not a prime number";
+        }
+      }
+    </script>
+  </body>
+</html>
